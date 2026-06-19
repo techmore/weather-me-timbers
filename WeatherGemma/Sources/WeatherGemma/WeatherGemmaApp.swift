@@ -8,6 +8,18 @@ struct WeatherGemmaApp: App {
     @State private var settings = SettingsStore()
 
     var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environment(weatherService)
+                .environment(locationService)
+                .environment(ollamaService)
+                .environment(settings)
+                .frame(width: 340)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .windowResizability(.contentSize)
+        .windowTitle("WeatherGemma")
+
         MenuBarExtra {
             ContentView()
                 .environment(weatherService)
