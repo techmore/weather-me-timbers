@@ -25,6 +25,8 @@
     <key>NSHighResolutionCapable</key>
     <true/>
     <key>LSUIElement</key>
-    <true/>
+    <false/>
+    <key>CFBundleIconFile</key>
+    <string></string>
 </dict>
 </plist>
